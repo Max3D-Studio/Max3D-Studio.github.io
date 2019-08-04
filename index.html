@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.min.css" />
 		<link rel="icon" href="/images/max3d-icon.png">
 		<!-- reCAPCHAv2 -->
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -419,13 +419,13 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 								<input type="hidden" name="_email.from" value="max3d-studio.github.io" />
 								<div class="fields">
 									<div class="field">
-										<input type="email" name="email" id="email" placeholder="Email" />
+										<input type="email" name="email" id="email" placeholder="Email" required/>
 									</div>
 									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Имя" />
+										<input type="text" name="name" id="name" placeholder="Имя" required />
 									</div>
 									<div class="field half">
-										<input type="text" name="phone" id="phone" placeholder="Телефон" />
+										<input type="tel" pattern='^\+?\d{0,13}' name="phone" id="phone" placeholder="Телефон" required />
 									</div>
 									<div class="field">
 										<textarea name="message" id="message" placeholder="Сообщение" rows="7"></textarea>

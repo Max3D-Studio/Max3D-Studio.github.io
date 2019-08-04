@@ -6,6 +6,17 @@
 
 /* Form */
 
+	
+		
+	input {
+		&:valid {
+			border-color: _palette(accent);
+		}
+		&:invalid {
+			border-color: #715!important;
+		}
+	}
+
 	form {
 		margin: 0 0 _size(element-margin) 0;
 
@@ -26,6 +37,7 @@
 				@include vendor('flex-shrink', '0');
 				padding: $gutter 0 0 $gutter;
 				width: calc(100% - #{$gutter * 1});
+
 
 				> :last-child {
 					margin-bottom: 0;
@@ -150,7 +162,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
