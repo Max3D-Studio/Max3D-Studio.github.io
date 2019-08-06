@@ -13,7 +13,7 @@
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.min.css" />
 		<link rel="icon" href="/images/max3d-icon.png">
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 	</head>
 	<body class="is-preload">
 
@@ -424,16 +424,16 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 										<input type="text" name="name" id="name" placeholder="Имя" required />
 									</div>
 									<div class="field half">
-										<input type="tel" pattern='[(][])]^\+?\d{0,25}' name="phone" id="phone" placeholder="Телефон" required />
+										<input type="tel" pattern='^[0-9-+s()]*$' name="phone" id="phone" placeholder="Телефон" required />
 									</div>
 									<div class="field">
 										<textarea name="message" id="message" placeholder="Сообщение" rows="7"></textarea>
 									</div>
 								</div>
 								<!-- reCAPCHAv2 -->
-								<div style="margin-bottom: 20px;" class="g-recaptcha" data-sitekey="6Lfe7LAUAAAAALeBKZfprnhRwjyOnGzDoagB_3vc" data-callback="recaptchaCallback"></div>
+								<!-- <div style="margin-bottom: 20px;" class="g-recaptcha" data-sitekey="6Lfe7LAUAAAAALeBKZfprnhRwjyOnGzDoagB_3vc" data-callback="recaptchaCallback"></div> -->
 								<ul class="actions">
-									<li><input type="submit" id="submitBtn" value="Отправить сообщение" class="button primary" disabled/></li>
+									<li><input type="submit" id="submitBtn" value="Отправить сообщение" class="button primary"/></li>
 								</ul>
 							</form>
 						</div>
@@ -476,11 +476,12 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				function recapchaCallback(params) {
+			<!-- Enable capcha if needed -->
+			<!-- <script>
+				function recapcthaCallback(params) {
 					const submitBtn = document.getElementById('submitBtn');
-					submitBtn.removeAttribute('diabled');
+					submitBtn.removeAttribute('disabled');
 				}
-			</script>
+			</script> -->
 	</body>
 </html>
